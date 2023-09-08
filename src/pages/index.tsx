@@ -79,27 +79,27 @@ const Index = () => {
         </section>
         <Divider />
 
-        <section className="flex flex-col justify-evenly py-20 sm:flex-row">
-          <div className="flex flex-col items-center justify-center">
+        <section className="flex flex-col justify-evenly py-20 lg:flex-row">
+          <div className="flex flex-col items-center justify-center pb-10 lg:pb-0">
             <img
               src="/assets/images/zapier-icon-svgrepo-com.svg"
               alt="Zapier Icon"
-              width={160}
-              height={160}
-              className="pb-3"
+              width={170}
+              height={170}
             />
-            <p>
+            <p className="text-center">
               Automate dataflow with <b>Zapier</b>
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center pl-8">
+          <div className="flex flex-col items-center justify-center lg:pl-8">
             <img
               src="/assets/images/google-sheets.png"
               alt="Zapier Icon"
-              width={175}
-              height={175}
+              width={170}
+              height={170}
+              className="pb-4"
             />
-            <p>
+            <p className="text-center">
               Export data from PDF to <b>Google Sheets</b>
             </p>
           </div>
