@@ -1,8 +1,8 @@
 // FIXME: Update this configuration file based on your project information
 
 export const AppConfig = {
-  site_name: 'Starter',
-  title: 'Nextjs Starter',
-  description: 'Starter code for your Nextjs Boilerplate with Tailwind CSS',
+  site_name: 'Doxfy - extract data from your documents',
+  title: 'Doxfy',
+  description: 'Extract data from PDF file in few clicks',
   locale: 'en',
 };

@@ -1,188 +1,176 @@
-import { useRouter } from 'next/router';
-
-import { Sponsors } from '@/components/Sponsors';
+import { Divider } from '@/components/Divider';
+import { Feature } from '@/components/Feature';
+import { MainButton } from '@/components/MainButton';
+import { PriceCard } from '@/components/PriceCard';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
+import { AppConfig } from '@/utils/AppConfig';
 
 const Index = () => {
-  const router = useRouter();
-
   return (
     <Main
       meta={
-        <Meta
-          title="Next.js Boilerplate Presentation"
-          description="Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework."
-        />
+        <Meta title={AppConfig.title} description={AppConfig.description} />
       }
     >
-      <a href="https://github.com/ixartz/Next-js-Boilerplate">
-        <img
-          src={`${router.basePath}/assets/images/nextjs-starter-banner.png`}
-          alt="Nextjs starter banner"
-          width="600"
-        />
-      </a>
-      <h2 className="mt-5 text-2xl font-bold">Sponsors</h2>
-      <Sponsors />
-      <h2 className="mt-5 text-2xl font-bold">
-        Boilerplate code for your Nextjs project with Tailwind CSS
-      </h2>
-      <p>
-        <span role="img" aria-label="rocket">
-          🚀
-        </span>{' '}
-        Next.js Boilerplate is a starter code for your Next js project by
-        putting developer experience first .{' '}
-        <span role="img" aria-label="zap">
-          ⚡️
-        </span>{' '}
-        Made with Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged,
-        VSCode, Netlify, PostCSS, Tailwind CSS.
-      </p>
-      <h3 className="text-lg font-semibold">Next js Boilerplate Features</h3>
-      <p>Developer experience first:</p>
-      <ul>
-        <li>
-          <span role="img" aria-label="fire">
-            🔥
-          </span>{' '}
-          <a href="https://nextjs.org" rel="nofollow">
-            Next.js
-          </a>{' '}
-          for Static Site Generator
-        </li>
-        <li>
-          <span role="img" aria-label="art">
-            🎨
-          </span>{' '}
-          Integrate with{' '}
-          <a href="https://tailwindcss.com" rel="nofollow">
-            Tailwind CSS
-          </a>
-        </li>
-        <li>
-          <span role="img" aria-label="nail_care">
-            💅
-          </span>{' '}
-          PostCSS for processing Tailwind CSS
-        </li>
-        <li>
-          <span role="img" aria-label="tada">
-            🎉
-          </span>{' '}
-          Type checking Typescript
-        </li>
-        <li>
-          <span role="img" aria-label="pencil2">
-            ✏️
-          </span>{' '}
-          Linter with{' '}
-          <a href="https://eslint.org" rel="nofollow">
-            ESLint
-          </a>
-        </li>
-        <li>
-          <span role="img" aria-label="hammer_and_wrench">
-            🛠
-          </span>{' '}
-          Code Formatter with{' '}
-          <a href="https://prettier.io" rel="nofollow">
-            Prettier
-          </a>
-        </li>
-        <li>
-          <span role="img" aria-label="fox_face">
-            🦊
-          </span>{' '}
-          Husky for Git Hooks
-        </li>
-        <li>
-          <span role="img" aria-label="no_entry_sign">
-            🚫
-          </span>{' '}
-          Lint-staged for running linters on Git staged files
-        </li>
-        <li>
-          <span role="img" aria-label="no_entry_sign">
-            🗂
-          </span>{' '}
-          VSCode configuration: Debug, Settings, Tasks and extension for
-          PostCSS, ESLint, Prettier, TypeScript
-        </li>
-        <li>
-          <span role="img" aria-label="robot">
-            🤖
-          </span>{' '}
-          SEO metadata, JSON-LD and Open Graph tags with Next SEO
-        </li>
-        <li>
-          <span role="img" aria-label="robot">
-            ⚙️
-          </span>{' '}
-          <a
-            href="https://www.npmjs.com/package/@next/bundle-analyzer"
-            rel="nofollow"
-          >
-            Bundler Analyzer
-          </a>
-        </li>
-        <li>
-          <span role="img" aria-label="rainbow">
-            🌈
-          </span>{' '}
-          Include a FREE minimalist theme
-        </li>
-        <li>
-          <span role="img" aria-label="hundred">
-            💯
-          </span>{' '}
-          Maximize lighthouse score
-        </li>
-      </ul>
-      <p>Built-in feature from Next.js:</p>
-      <ul>
-        <li>
-          <span role="img" aria-label="coffee">
-            ☕
-          </span>{' '}
-          Minify HTML &amp; CSS
-        </li>
-        <li>
-          <span role="img" aria-label="dash">
-            💨
-          </span>{' '}
-          Live reload
-        </li>
-        <li>
-          <span role="img" aria-label="white_check_mark">
-            ✅
-          </span>{' '}
-          Cache busting
-        </li>
-      </ul>
-      <h3 className="text-lg font-semibold">Our Stater code Philosophy</h3>
-      <ul>
-        <li>Minimal code</li>
-        <li>SEO-friendly</li>
-        <li>
-          <span role="img" aria-label="rocket">
-            🚀
-          </span>{' '}
-          Production-ready
-        </li>
-      </ul>
-      <p>
-        Check our GitHub project for more information about{' '}
-        <a href="https://github.com/ixartz/Next-js-Boilerplate">
-          Nextjs Boilerplate
-        </a>
-        . You can also browse our{' '}
-        <a href="https://creativedesignsguru.com/category/nextjs/">
-          Premium NextJS Templates
-        </a>{' '}
-        on our website to support this project.
-      </p>
+      <main className="h-full">
+        <section>
+          <div className="hero min-h-[85vh] bg-gray-200">
+            <div className="hero-content flex-col justify-around text-center lg:flex-row">
+              <div className="max-w-lg">
+                <h1 className="text-5xl font-bold">
+                  Automate Your PDF Data Extraction
+                </h1>
+                {/* <h1 className="text-5xl font-bold"></h1> */}
+                {/* <p className="m-0 p-0">Automate your document workflow</p> */}
+                <p className="py-6">
+                  Introducing {AppConfig.title}, the Easy to Use Tool for
+                  Seamless Data Extraction from PDF
+                </p>
+
+                <MainButton href="#waitlist" title="Join Waitlist" />
+              </div>
+              <img
+                className="h-full w-full object-cover object-center"
+                src="/assets/images/pdf2other.png"
+                alt="PDF to CSV, JSON, EXCEL"
+              />
+            </div>
+          </div>
+        </section>
+        <Divider />
+
+        <section className="pt-20">
+          <div className="hero bg-gray-200">
+            <div className="hero-content mb-20 h-full w-full flex-col items-center justify-around px-0 text-center lg:flex-row">
+              <div className=" grid h-full max-w-xs grid-flow-col grid-rows-3">
+                <h1 className="text-4xl font-bold">
+                  No Manual Data Extraction
+                </h1>
+                <p className="row-span-2">
+                  {AppConfig.title} is your trusted companion for automating
+                  your document workflow. With its advanced technology, this
+                  powerful tool extracts data from PDF files with unparalleled
+                  precision and speed, saving you valuable time and resources.
+                </p>
+              </div>
+              <div className="flex h-full flex-col justify-around">
+                <Feature
+                  title="Easy To Use"
+                  description="No complex tools and configuration needed."
+                  icon="/assets/images/icons8-easy-50.png"
+                  alt="Easy to use icon"
+                />
+                <Feature
+                  title="Fast"
+                  description="Get the information you need in seconds."
+                  icon="/assets/images/icons8-fast-50.png"
+                  alt="Fast icon"
+                />
+                <Feature
+                  title="Accurate"
+                  description=" Expect highly accurate extraction results, minimizing errors and ensuring reliable data for informed decision-making"
+                  icon="/assets/images/icons8-goal-50.png"
+                  alt="accuracy icon"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <Divider />
+
+        <section className="flex flex-col justify-evenly py-20 sm:flex-row">
+          <div className="flex flex-col items-center justify-center">
+            <img
+              src="/assets/images/zapier-icon-svgrepo-com.svg"
+              alt="Zapier Icon"
+              width={160}
+              height={160}
+              className="pb-3"
+            />
+            <p>
+              Automate dataflow with <b>Zapier</b>
+            </p>
+          </div>
+          <div className="flex flex-col items-center justify-center pl-8">
+            <img
+              src="/assets/images/google-sheets.png"
+              alt="Zapier Icon"
+              width={175}
+              height={175}
+            />
+            <p>
+              Export data from PDF to <b>Google Sheets</b>
+            </p>
+          </div>
+        </section>
+        <section
+          id="waitlist"
+          className="flex h-full flex-col items-center justify-center rounded-lg border bg-gray-400 py-16"
+        >
+          <h1 className="px-5 text-center text-4xl font-bold">
+            Get early access for a discount
+          </h1>
+          <p className="px-5 py-6 text-center">
+            Join our waitlist and get access to {AppConfig.title} for a
+            discounted early-bird price
+          </p>
+          <form className="flex " action="https://submit-form.com/iy0ZmUn8">
+            <input
+              type="email"
+              required
+              placeholder="Enter email address"
+              className="input mr-2  w-full max-w-xs"
+              autoComplete="email"
+              name="email"
+            />
+            <MainButton type="submit" title="Join" />
+          </form>
+        </section>
+        <Divider id="price" />
+        <div className="flex pt-20">
+          <section className=" flex grow flex-col items-center lg:flex-row lg:items-start lg:justify-evenly">
+            <PriceCard
+              buttonTitle="Join waitlist"
+              name="Free"
+              price="$0"
+              description="For individuals tired of manually extracting data trapped in their documents."
+              featureList={[
+                '30 pages per month',
+                'Download to Excel, CSV, JSON, XML ',
+              ]}
+            />
+            <PriceCard
+              buttonTitle="Join waitlist"
+              name="Pro"
+              fakePrice="$22"
+              price="$16"
+              description="Great for professionals sicking to automate data extraction."
+              featureList={[
+                '5000 pages per month',
+                'Download to Excel, CSV, JSON, XML ',
+                'Google Sheets Export Integration',
+                'Zapier Integration',
+              ]}
+            />
+
+            <PriceCard
+              buttonTitle="Join waitlist"
+              name="Business"
+              fakePrice="$50"
+              price="$39"
+              description="Perfect for business to automate PDF data extraction"
+              featureList={[
+                '16000 pages per month',
+                'Download to Excel, CSV, JSON, XML ',
+                'Google Sheets Export Integration',
+                'Zapier Integration',
+                'API (coming soon)',
+              ]}
+            />
+          </section>
+        </div>
+      </main>
     </Main>
   );
 };
