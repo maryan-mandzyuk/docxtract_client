@@ -49,7 +49,10 @@ const Meta = (props: IMetaProps) => {
         />
       </Head>
       <div className="container">
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-7P564263G9" />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-7P564263G9"
+        />
         <Script id="google-analytics">
           {`
           window.dataLayer = window.dataLayer || [];
