@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Script from 'next/script';
 import { NextSeo } from 'next-seo';
 
 import { AppConfig } from '@/utils/AppConfig';
@@ -47,7 +46,7 @@ const Meta = (props: IMetaProps) => {
           href={`${router.basePath}/favicon.ico`}
           key="favicon"
         />
-        <div className="container">
+        {/* <div className="container">
           <Script src="https://www.googletagmanager.com/gtag/js?id=G-7P564263G9" />
           <Script id="google-analytics">
             {`
@@ -58,7 +57,7 @@ const Meta = (props: IMetaProps) => {
           gtag('config', 'G-7P564263G9');
         `}
           </Script>
-        </div>
+        </div> */}
       </Head>
       <NextSeo
         title={props.title}
